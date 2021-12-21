@@ -15,15 +15,15 @@ public class Task {
         driver.manage().window().maximize();
         // simple alert
         driver.findElement(By.xpath("//button[@class='btn btn-default']")).click();
-        Alert simpleAlert = driver.switchTo().alert();
         Thread.sleep(2000);
+        Alert simpleAlert = driver.switchTo().alert();
         simpleAlert.accept();
         Thread.sleep(2000);
 
         // confirm alert
         driver.findElement(By.xpath("//button[text()='Click me!'][@class='btn btn-default btn-lg']")).click();
-        Alert confirmAlert = driver.switchTo().alert();
         Thread.sleep(2000);
+        Alert confirmAlert = driver.switchTo().alert();
         confirmAlert.dismiss();
         Thread.sleep(2000);
 
@@ -33,7 +33,6 @@ public class Task {
         Alert promptAlert = driver.switchTo().alert();
         Thread.sleep(2000);
         promptAlert.sendKeys("Prompt Alert");
-        Thread.sleep(2000);
         promptAlert.accept();
         Thread.sleep(2000);
 
