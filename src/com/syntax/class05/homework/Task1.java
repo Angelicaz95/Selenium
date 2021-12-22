@@ -17,15 +17,20 @@ public class Task1 {
 
         List<WebElement> links = driver.findElements(By.tagName("a"));
         System.out.println("Total number of all links is "+links.size());
-        int numberOFLinksWithText=0;
+        int numberOfLinksWithText=0;
+
         for(WebElement link : links){
             String linkText = link.getText();
             if(!linkText.isEmpty()){
-                numberOFLinksWithText++;
+                numberOfLinksWithText++;
+
                 System.out.println(linkText);
+                String linkAddress= link.getAttribute("href");
+                System.out.println(linkAddress);
 
             }
-            System.out.println("Total number of links with text is "+numberOFLinksWithText);
+            System.out.println("Number of links with text is "+numberOfLinksWithText);
+
 
         }
         driver.quit();

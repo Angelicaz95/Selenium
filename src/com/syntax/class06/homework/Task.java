@@ -32,7 +32,7 @@ public class Task {
         driver.findElement(By.xpath("//button[@class='btn btn-default btn-lg'][text()='Click for Prompt Box']")). click();
         Alert promptAlert = driver.switchTo().alert();
         Thread.sleep(2000);
-        promptAlert.sendKeys("Prompt Alert");
+        promptAlert.sendKeys("A");
         promptAlert.accept();
         Thread.sleep(2000);
 
