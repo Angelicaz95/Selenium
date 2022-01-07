@@ -17,7 +17,7 @@ public class WindowHandles {
         WebElement newTab = driver.findElement(By.cssSelector("button#tabButton"));
         WebElement newWindow =  driver.findElement(By.cssSelector("button#windowButton"));
 
-        // click on the new tab and window butn
+        // click on the new tab and window button
 
         newWindow.click();
         newTab.click();
